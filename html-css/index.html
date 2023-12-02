@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <!-- Include Particle.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Include your custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <header>
+            <div class="center-content">
+                <h1>VARADARAYA GANESH SHENOY</h1>
+                <p><span id="role">Robotics Software Developer</span></p>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <a href="#about" class="tab">About Me</a>
+            <a href="#projects" class="tab">Projects</a>
+            <a href="#contact" class="tab">Contact Me</a>
+        </div>
+
+        <!-- Content Sections -->
+        <section id="about" class="tab-content hidden">
+            <h2>About Me</h2>
+            <p>Write a brief introduction about yourself here.</p>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <!-- Add your projects here -->
+        </section>
+
+        <section id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <!-- Add your contact information and a form here -->
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Include Particle.js configuration -->
+    <script src="particles-config.js"></script>
+
+    <!-- Include custom JavaScript for tabs and scroll-triggered About Me section -->
+    <script src="tabs.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the text element
+            var roleElement = document.getElementById('role');
+            var roleText = roleElement.innerText;
+    
+            // Clear the text content
+            roleElement.innerText = '';
+    
+            // Split the text into an array of words
+            var words = roleText.split(' ');
+    
+            // Set up variables to keep track of the current word and letter
+            var wordIndex = 0;
+            var letterIndex = 0;
+    
+            // Set an interval to add each letter with a delay
+            var typingInterval = setInterval(function () {
+                // Add the current letter to the text content
+                roleElement.innerHTML += words[wordIndex][letterIndex];
+    
+                // Move to the next letter
+                letterIndex++;
+    
+                // Check if we've reached the end of the current word
+                if (letterIndex === words[wordIndex].length) {
+                    // Add a space between words, but only if it's not the last word
+                    if (wordIndex < words.length - 1) {
+                        roleElement.innerHTML += '&nbsp;'; // Add a non-breaking space
+                    }
+    
+                    // Move to the next word
+                    wordIndex++;
+                    letterIndex = 0;
+                }
+    
+                // Check if we've reached the end of all words
+                if (wordIndex === words.length) {
+                    // Stop the interval
+                    clearInterval(typingInterval);
+                }
+            }, 100); // Adjust the interval (in milliseconds) to control the typing speed
+        });
+    </script>
+</body>
+</html>

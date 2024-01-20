@@ -4821,7 +4821,7 @@ a img {
 }
 
 #particles-js {
-    background: #1488CC;
+    background: #000000;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -4926,7 +4926,7 @@ a img {
 
 .header-icons .icon:active,
 .header-icons .icon:hover {
-    color: #1488CC;
+    color: #000000;
     background: #fff
 }
 
@@ -5041,7 +5041,7 @@ a img {
 }
 
 .user-projects li {
-    color: #1488CC;
+    color: #000000;
     font-size: 1.1rem
 }
 

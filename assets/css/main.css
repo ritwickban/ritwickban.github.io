@@ -5084,9 +5084,9 @@ a img {
     display: inline-block;
     margin: 10px 0;
     padding: 5px;
-    color: #1488CC;
+    color: #000000;
     background-color: transparent;
-    border: 1px solid #1488CC;
+    border: 1px solid #000000;
     border-radius: 10px;
     text-align: center;
     outline: 0;

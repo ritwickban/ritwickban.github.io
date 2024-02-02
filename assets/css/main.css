@@ -4952,8 +4952,8 @@ a img {
     position: absolute;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    top: 55%;
-    left: 55%;
+    top: 80%;
+    left: 80%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 100px;

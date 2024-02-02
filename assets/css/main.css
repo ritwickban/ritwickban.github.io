@@ -4952,7 +4952,7 @@ a img {
     position: absolute;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    top: 80%;
+    top: 10%;
     left: 80%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);

@@ -4973,7 +4973,8 @@ a img {
 #about {
     width: 90%;
     margin: 0 auto;
-    max-width: 960px
+    max-width: 960px;
+    color:#000
 }
 
 @media only screen and (min-width:550px) {

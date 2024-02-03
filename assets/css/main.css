@@ -4958,7 +4958,7 @@ a img {
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
-    fill: #fff;
+    fill: #0f0;
     -webkit-animation: pulse 1.3s infinite;
     animation: pulse 1.3s infinite
 }

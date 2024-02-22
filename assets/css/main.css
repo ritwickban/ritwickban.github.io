@@ -4489,6 +4489,11 @@ template {
     color: #dd732a
 }
 
+.devicon-ros.colored,
+.devicon-ros.colored {
+    color: #512add
+}
+
 .devicon-foundation-plain-wordmark.colored,
 .devicon-foundation-plain.colored {
     color: #008cba

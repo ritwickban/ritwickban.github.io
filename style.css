@@ -26,15 +26,14 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end;  /* Align links to the right */
-    padding: 10px 20px;   /* Add padding for better spacing */
+    justify-content: space-around;
+    padding: 10px 0;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
 nav li {
     list-style: none;
-    margin-left: 15px;  /* Add spacing between links */
 }
 
 nav a {

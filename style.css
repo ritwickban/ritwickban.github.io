@@ -23,7 +23,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url('your_background.gif') center center fixed;
+    background: url('Gif1.gif') center center fixed;
     background-size: cover;
     animation: moveBackground 20s ease infinite;
   }

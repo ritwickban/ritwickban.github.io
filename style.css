@@ -1,59 +1,72 @@
 body {
     font-family: sans-serif;
     margin: 0;
-}
-
-.container { /* Create a container for the content (excluding navigation) */
-    flex: 1;  /* Make the content take up most of the space */
-}
-
-header {
-    text-align: center;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f1f1f1;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-}
-
-nav {
     display: flex;
-    justify-content: space-around;  /* Align links horizontally */
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-nav li {
+    justify-content: space-between;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  header nav {
+    display: flex;
     list-style: none;
-    margin-left: 15px;  /* Add spacing between links */
-}
-
-nav a {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav li {
+    margin-right: 20px;
+  }
+  
+  a {
     text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-
-nav a:hover {
-    color: #ccc;
-}
-
-main {
-    display: flex;
-    flex-direction: column;  /* Stack sections vertically */
-}
-
-section {
-    width: 100%;  /* Make sections take full width */
+    color: black;
+  }
+  
+  main {
     padding: 20px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 10px 0;  /* Add top and bottom margin */
-}
-
-h2 {
+  }
+  
+  .intro {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .name {
+    text-align: center;
+    font-size: 2em;
     margin-bottom: 10px;
-}
-
-p {
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 1em;
     line-height: 1.5;
-}
+    margin-bottom: 20px;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .image-text {
+    text-align: center;
+  }
+  

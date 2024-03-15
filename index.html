@@ -3,33 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ritwick Banerjee - Data Scientist</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>[Your Name] | Data Scientist</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="landing">
-    <h1>Welcome to my Personal Page</h1>
-    <button onclick="scrollToContent()">Explore</button>
-  </div>
-  <div class="background"></div>
-  <div class="container" id="content">
-    <section id="about">
+  <header class="hero">
+    <h1>[Your Name]</h1>
+    <h2>Data Scientist | Helping Businesses Make Data-Driven Decisions</h2>
+    <button onclick="openProjects()">Explore Projects</button>
+  </header>
+
+  <main>
+    <section class="about">
       <h2>About Me</h2>
-      <p>My name is Ritwick Banerjee. I am a passionate data scientist with a strong background in machine learning and data analysis.</p>
+      <p>I am a data scientist with [number] years of experience in [mention your areas of expertise]. I am passionate about using data to solve complex problems and drive business value.</p>
+      <p>Here are some of my skills and experience:</p>
+      <ul>
+        <li>Programming Languages: Python, R, SQL</li>
+        <li>Machine Learning: [List relevant libraries/frameworks]</li>
+        <li>Data Analysis & Visualization: [List relevant tools]</li>
+      </ul>
+      <a href="[Your LinkedIn URL]">LinkedIn</a>
+      <a href="[Your GitHub URL]">GitHub</a>
     </section>
-    <section id="experience">
-      <h2>Experience and Education</h2>
-      <p>Insert your experience and education here...</p>
+
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <p>Click a project title to learn more.</p>
+      <article class="project" onclick="openProjectDetails(this)">
+        <h3>Project Title 1</h3>
+        <p>Brief project description.</p>
+      </article>
+      <article class="project" onclick="openProjectDetails(this)">
+        <h3>Project Title 2</h3>
+        <p>Brief project description.</p>
+      </article>
+      </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me for any inquiries.</p>
+      <p>Email: [Your Email Address]</p>
     </section>
-    <section id="projects">
-      <h2>Projects and Publications</h2>
-      <p>Highlight your projects and publications here...</p>
-    </section>
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>You can contact me at ritwick@example.com</p>
-    </section>
-  </div>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>

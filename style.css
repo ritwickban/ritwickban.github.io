@@ -1,103 +1,128 @@
-body {
-    font-family: sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 50px;
-    background-color: #f0f0f0;
-  }
-  
-  .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
-  
-  .hero button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .hero button:hover {
-    background-color: #3e8e41;
-  }
-  
-  main {
-    padding: 50px;
-  }
-  
-  .about {
-    margin-bottom: 50px;
-  }
-  
-  .about ul {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0;
-  }
-  
-  .about li {
-    margin-bottom: 5px;
-  }
-  
-  .about a {
-    color: #4CAF50;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
     text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  .about a:hover {
-    color: #3e8e41;
-  }
-  
-  .projects {
-    display: none; /* Initially hide projects section */
-  }
-  
-  .projects h2 {
-    margin-bottom: 20px;
-  }
-  
-  .projects p {
-    margin-bottom: 10px;
-  }
-  
-  .project {
-    cursor: pointer;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .project h3 {
-    margin-bottom: 5px;
-  }
-  
-  .project p {
-    color: #666;
-  }
-  
-  .contact {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .contact h2 {
-    margin-bottom: 20px;
-  }
-  
-  .contact p {
-    margin-bottom: 10px;
-  }
-  
-  .contact p:last-child { /* Style the last paragraph (email) differently */
     font-weight: bold;
-  }
-  
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://source.unsplash.com/random/1600x900');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.5s backwards;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeInUp 1s ease 1s backwards;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Other Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

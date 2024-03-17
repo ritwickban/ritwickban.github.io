@@ -3,29 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
         <nav>
+            <div class="logo">
+                <a href="#">My Portfolio</a>
+            </div>
             <ul>
-                <li><a href="about_me.html">About Me</a></li>
-                <li><a href="projects_publications.html">Projects and Publications</a></li>
-                <li><a href="education_experience.html">Education and Experience</a></li>
-                <li><a href="contact_me.html">Contact Me</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Explore my work and get to know me better.</p>
+                <a href="#" class="btn">View Projects</a>
+            </div>
+        </section>
+
+        <section class="about">
             <h2>About Me</h2>
-            <p>Welcome to my personal website! Here, you can learn more about me, my interests, and my experiences.</p>
-            <p>Feel free to navigate through the links above to explore various sections of my website.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nisl nisl eu nunc.</p>
+        </section>
+
+        <section class="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li>
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <h3>Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 My Personal Website. All rights reserved.</p>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

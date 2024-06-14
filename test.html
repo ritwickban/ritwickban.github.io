@@ -26,8 +26,8 @@
 
         .logo {
             position: absolute;
-            top: 05px;
-            left: 05px;
+            top: 5px;
+            left: 5px;
             width: 80px;
             cursor: pointer;
             z-index: 10;
@@ -59,62 +59,85 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 105%;
-            object-fit:cover; 
+            height: 100%;
+            object-fit: cover;
             z-index: -1;
         }
 
-        .section {
-            margin-bottom: 30px;
-            margin-top: 50px; /* Space between sections */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .section h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            background-color: white;
+            top: 50%;
+            left: 0;
         }
 
-        .section p {
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: ' ';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.left::after {
+            left: -16px;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #FF9F55;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .timeline-content h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .timeline-content p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .timeline-item.left .timeline-content {
+            text-align: right;
+        }
+
+        .timeline-item.right .timeline-content {
             text-align: left;
-            margin-bottom: 10px;
         }
 
-        .tech-stack {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .tech-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-        }
-
-        .tech-item img {
-            width: 20px; /* Adjust size as needed */
-            height: 20px;
-            margin-right: 10px;
-        }
-
-        .banner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: auto; /* Push to bottom */
-        }
-
-        .banner a {
-            margin: 0 10px;
-        }
-
-        .banner img {
-            width: 20px; /* Adjust size as needed */
-            height: 20px;
-        }
 
         .navigation {
             position: absolute;
@@ -137,39 +160,27 @@
         .navigation button:hover {
             background: rgba(0, 0, 0, 0.9);
         }
-
-        .content {
-            padding: 20px;
-            text-align: left; /* Align text to the left */
-            display: flex;
-            flex-direction: row; /* Align content side by side */
-            align-items: flex-start; /* Align items at the top */
-            justify-content: space-between; /* Distribute space between text and image */
-        }
-
-        .content img {
-            width: 300px; /* Adjust size of the image */
-            height: auto;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="Logo.png" alt="Logo" class="logo" onclick="goToPage(0)">
         
-        <div class="page active" id="page-0", style="justify-content: center; ">
+        <div class="page active" id="page-0">
             <video class="video-background" autoplay loop muted>
                 <source src="bg000.mp4" type="video/mp4">
             </video>
-            <div class="content", style="text-align: center;">
+            <div class="content">
                 <div>
                     <h1>RITWICK BANERJEE</h1>
                     <h2>Data Scientist | NLP Researcher</h2>
                     <h4>University of Minnesota</h4>
                     Welcome to my corner of the Internet, No matter what you're here for, I promise you will learn something new!
                 </div>
+                <img src="your_picture.jpg" alt="Your Picture">
             </div>
         </div>
+
         <div class="page" id="page-1">
             <video class="video-background" autoplay loop muted>
                 <source src="bg11.mp4" type="video/mp4">
@@ -178,54 +189,101 @@
                 <h1>About Me</h1>
                 <p>Hey there! Do you know (Catchy line).</p>
             </div>
-            <div class="content" style="margin-right: 10px;">
+            <div class="content">
+                <img src="your_picture.jpg" alt="Your Picture">
                 <div>
                     <p>Hey there! I'm Ritwick, a Graduate Research Assistant at the University of Minnesota, where I dive deep into data analyses to help a local school district reduce ethnic and economic disparities. By night, I'm a superhero researcher for the Minnesota NLP group, working on a repository to unify major language models and a framework to evaluate them. Oh, and did I mention my gig as a data analyst for the Mobile Health Initiative? Yep, I'm tackling emigrant health issues with data too! - Nah not a big deal!</p>
                     <p>When I'm not swimming in data, I'm whipping up culinary masterpieces that would make Gordon Ramsay proud, playing soccer, badminton, and squash (yes, I have too much energy), hiking, ice-skating, or chasing the elusive northern lights. I'm also a music explorer and podcast aficionado, always on the lookout for the next great self-development episode.</p>
                     <p>Here's a quirky tidbit: I have strikingly amazing conversations and a delightfully off-beat perspective on life. I live for a healthy debate and will probably disagree with you 90% of the time—not because I'm difficult, but because it's fun to keep things spicy!</p>
                     <p>Want to know that I am for real? Let's grab a coffee at the nearest Caribou Coffee (Yes, I am turning into a true Minnesotan!) Who knows, we might just teach ChatGPT to appreciate a Knock-knock joke.</p>
                 </div>
-                <img src="My-photo.jpg" alt="That's me!" style="height: auto; max-width: 100%; margin-right: 20px; justify-content: center; display: block; margin-left: 20px; border-radius: 8px; border: 2px solid #ddd;">
             </div>
             <div class="section tech-stack">
-                <h4>Here is what I love working with: </h4>
+                <h1>Tech Stack</h1>
                 <div class="tech-item">
-                    <img src="python.png" alt="Logo 1">
+                    <img src="logo1.png" alt="Logo 1">
+                    <p>Tool 1</p>
                 </div>
                 <div class="tech-item">
-                    <img src="R.png" alt="Logo 2">
+                    <img src="logo2.png" alt="Logo 2">
+                    <p>Tool 2</p>
                 </div>
                 <div class="tech-item">
-                    <img src="jupyter.png" alt="Logo 3">
+                    <img src="logo3.png" alt="Logo 3">
+                    <p>Tool 3</p>
                 </div>
                 <!-- Add more tech items as needed -->
             </div>
             <div class="section banner">
-                <a href="https://github.com/ritwickban" target="https://github.com/ritwickban"><img src="github_logo.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/contactritwick/" target="_blank"><img src="linkedin_logo.png" alt="LinkedIn"></a>
-                <a href="https://drive.google.com/file/d/1yXFzAQA8HDXYrAYTY04IWxJW7kBq8JgI/view?usp=drive_link" target="_blank"><img src="resume.png" alt="Resume"></a>
-            </div>  
+                <a href="link_to_github" target="_blank"><img src="github_logo.png" alt="GitHub"></a>
+                <a href="link_to_linkedin" target="_blank"><img src="linkedin_logo.png" alt="LinkedIn"></a>
+                <a href="link_to_resume" target="_blank"><img src="resume_logo.png" alt="Resume"></a>
+            </div>
         </div>
+
         <div class="page" id="page-2">
             <video class="video-background" autoplay loop muted>
                 <source src="bg2.mp4" type="video/mp4">
             </video>
             <div class="content" style="align-items: center; justify-content: center; flex-direction: column;">
                 <h1>Education and Experience</h1>
-                <p>Details about my educational background and work experience.</p>
-                <p>More content goes here...</p>
-                <p>More content goes here...</p>
-                <p>More content goes here...</p>
-                <p>More content goes here...</p>
-                <p>More content goes here...</p>
-                <p>More content goes here...</p>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h2>2017</h2>
+                            <p>I started College</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h2>2021</h2>
+                            <p>Graduated College, Started at KPMG</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h2>2022</h2>
+                            <p>Responsible for training interns</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h2>2022</h2>
+                            <p>Led interns to deliver automated Revenue assurance controls</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h2>2023</h2>
+                            <p>Managed one account, and led the team to deliver timely</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h2>2023</h2>
+                            <p>Started Graduate Studies</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h2>2023</h2>
+                            <p>Got promoted</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h2>2024</h2>
+                            <p>Started as a Research Assistant</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div>        
         <div class="page" id="page-3">
             <video class="video-background" autoplay loop muted>
                 <source src="video3.mp4" type="video/mp4">
             </video>
-            <div class="content" style="align-items: center; justify-content: center; flex-direction: column;">
+            <div class="content">
                 <h1>Projects and Publications</h1>
                 <p>Here are some of my notable projects and publications.</p>
                 <p>More content goes here...</p>
@@ -238,16 +296,16 @@
         </div>
         <div class="page" id="page-4">
             <video class="video-background" autoplay loop muted>
-                <source src="bg00.mp4" type="video/mp4">
+                <source src="video4.mp4" type="video/mp4">
             </video>
-            <div class="content" style="align-items: center; justify-content: center; flex-direction: column;">
+            <div class="content">
                 <h1>Get in Touch</h1>
                 <p>Feel free to reach out to me through my contact page.</p>
-                <div class="section banner">
-                    <a href="https://github.com/ritwickban" target="https://github.com/ritwickban"><img src="github_logo.png" alt="GitHub"></a>
-                    <a href="https://www.linkedin.com/in/contactritwick/" target="_blank"><img src="linkedin_logo.png" alt="LinkedIn"></a>
-                    <a href="https://drive.google.com/file/d/1yXFzAQA8HDXYrAYTY04IWxJW7kBq8JgI/view?usp=drive_link" target="_blank"><img src="resume.png" alt="Resume"></a>
-                </div>
+                <p>More content goes here...</p>
+                <p>More content goes here...</p>
+                <p>More content goes here...</p>
+                <p>More content goes here...</p>
+                <p>More content goes here...</p>
                 <p>More content goes here...</p>
             </div>
         </div>
@@ -272,22 +330,21 @@
             });
         }
 
-        //document.querySelectorAll('.page').forEach((page, index) => {
-            //page.addEventListener('scroll', (e) => {
-                //if (e.target.scrollTop + e.target.clientHeight >= e.target.scrollHeight) {
+        document.querySelectorAll('.page').forEach((page, index) => {
+            page.addEventListener('scroll', (e) => {
+                if (e.target.scrollTop + e.target.clientHeight >= e.target.scrollHeight) {
                     // Scrolled to bottom
-                    //if (index < document.querySelectorAll('.page').length - 1) {
-                        //goToPage(index + 1);
-                    //}
-                //} else if (e.target.scrollTop === 0) {
+                    if (index < document.querySelectorAll('.page').length - 1) {
+                        goToPage(index + 1);
+                    }
+                } else if (e.target.scrollTop === 0) {
                     // Scrolled to top
-                    //if (index > 0) {
-                        //goToPage(index - 1);
-                    //}
-                //}
-            //});
-        //});
-    </script>
+                    if (index > 0) {
+                        goToPage(index - 1);
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>

@@ -1,42 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Metadata of the Webpage -->
-    <!-- Character-set Metadata -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Viewport Metadata -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Description Metadata-->
     <meta name="description" content="Portfolio Website" />
-    <!-- Author Metadata -->
     <meta name="author" content="Varadaraya Ganesh Shenoy" />
-    <!-- Keyword Metadata -->
-    <meta
-      name="keywords"
-      content="VaradarayaShenoy, Varadaraya Ganesh Shenoy, Varadaraya Ganesh Shenoy SKCH,
-        Varadaraya Ganesh Shenoy PESIT, Varadaraya Ganesh
-        Singh ASU , Varadaraya Ganesh Shenoy Bangalore, Varadaraya Ganesh
-        Singh Minnesota, Varadaraya Ganesh Shenoy University of Minnesota-Twin Cities,
-        Varadaraya Ganesh Shenoy, Varadaraya Ganesh Shenoy Website"
-    />
-    <!-- Webpage Logo -->
+    <meta name="keywords" content="VaradarayaShenoy, Varadaraya Ganesh Shenoy, Varadaraya Ganesh Shenoy University of Minnesota-Twin Cities" />
     <link rel="shortcut icon" href="./assets/img/acar.ico" />
-    <!-- Webpage Title -->
     <title>Varadaraya Ganesh Shenoy</title>
-    <!-- Import CSS: Main Stylesheet -->
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDQHDQ08P2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-KDQHDQ08P2');
     </script>
-  </head>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+      #particles-js {
+        margin-bottom: -100px;
+      }
+      .header {
+        text-align: center;
+        padding: 50px 0;
+      }
 
+      .header .site-title {
+        font-size: 3em;
+        color: white;
+      }
+
+      .header .site-description {
+        font-size: 1.5em;
+        color: #888;
+      }
+
+      .header-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5em;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #111;
+        color: #888;
+      }
+
+      .tab {
+        overflow: hidden;
+        background-color: transparent;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        left: 1500px;
+        z-index: 1;
+        border: none;
+        text-align: center;
+        width: 500%;
+      }
+
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-family: 'Courier New', Courier, monospace; /* Use monospace font for matrix-like effect */
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: white;
+      }
+
+      .tab button:hover {
+        background-color: #333;
+      }
+
+      .tab button.active {
+        background-color: #555;
+      }
+    </style>
+  </head>
   <body>
     <div id="particles-js">
       <div class="header">
@@ -52,253 +105,23 @@
             <i class="icon fa fa-github-alt" aria-hidden="true"></i>
           </a>
           <a aria-label="My Résumé" target="_blank" href="https://white-glennie-67.tiiny.site/">
-            <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
+            <i class="icon fa fa-file-pdf-o" aria-hidden="true"></i>
           </a>
-          <a aria-label="Send Email" href="mailto:sheno051@umn.edu" target="_blank"
-            ><i class="icon fa fa-envelope"></i
-          ></a>
-        </div>
-        <div class="header-links">
-          <a class="link" href="#about" data-scroll>About Me</a>
-
-          <a class="link" href="#projects" data-scroll>Projects</a>
-          <a class="link" href="#media-recon" data-scroll>Media Recognition</a>
+          <a aria-label="Send Email" href="mailto:sheno051@umn.edu" target="_blank">
+            <i class="icon fa fa-envelope"></i>
+          </a>
         </div>
       </div>
-      <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
     </div>
 
-    <!-- About Section -->
-    <section id="about">
-      <!-- User Introduction-->
-      <div class="user-details">
-        <h1>My Story</h1>
-          <img
-            src="./assets/img/jpg/Professional-Picture-Me.jpg"
-            alt="Professional Me"
-            width="20%"
-            style="border-radius: 50%"
-          />
-        </picture> 
-        <body>
-          <section>
-              <h1>👋 Hello, I'm Varadaraya.</h1>
-              <p>
-                  A robotics enthusiast with a background in Electrical Engineering. I earned my Bachelor's in Electronics Engineering in
-                  India and pursued a Master's at Arizona State University. Currently doing a Masters in Robotics at the University of Minnesota Twin Cities.
-              </p>
-      
-              <p>
-                  🤖 With two years of experience as a Robotics-Path Planning Engineer at Flux Auto India, I'm passionate about
-                  developing software for autonomous vehicles.
-              </p>
-      
-              <p>
-                  💡 Explore my journey and projects here. I'm on the lookout for opportunities to contribute to the future of
-                  autonomous systems.
-              </p>
-      
-              <p>
-                  🚀 Let's connect and explore possibilities!
-              </p>
-          </section>
-        </body>
-      </div>
-
-      <!-- User Specifics -->
-      <div class="user">
-        <!-- Technology Stack #1: Languages -->
-        <div class="tech">
-          <h2>Languages</h2>
-          <i class="devicon-python-plain colored"></i>
-          <i class="devicon-cplusplus-plain colored"></i>
-          <p>My favorite languages for systems programming, software engineering, and data analysis.</p>
-        </div>
-
-        <!-- Technology Stack #4: Tools -->
-        <div class="tech">
-          <h2>Tools</h2>
-          <i class="devicon-git-plain-wordmark colored"></i>
-          <i class="devicon-visualstudio-plain colored"></i>
-          <i class="devicon-docker-plain-wordmark colored"></i>
-          <i class="devicon-linux-plain colored"></i>
-          <img
-          height="75"
-          width="75"
-          src="assets/img/svg/ros_logo.svg"
-          style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-          />
-          <p>My favorite tools for version control, code editing, and container orchestration.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="user-details">
-        <h1>Featured Projects</h1>
-      </div>
-
-      <!-- User Project #2: Velocity Profile for Autonomous Vehicles -->
-      <div class="user-projects">
-        <div class="images-left">
-          <video width="320" height="240"controls> 
-            <source src="assets/videos/vel-profile.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="contents-right" style="text-align: center">
-          <h3>Speed Profile for Non-Holonomic Autonomous Vehicle</h3>
-          <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/cplusplus.svg"
-            style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-          />
-          <img
-          height="75"
-          width="75"
-          src="assets/img/svg/ros_logo.svg"
-          style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-          />
-          &nbsp;
-          <!-- <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" /> -->
-          <p style="text-align: justify">
-            I pioneered a dynamic speed profile algorithm that intelligently adjusts vehicle speed in real-time based on path curvature. 
-            Deployed successfully in ROS, C++, and Eigen, this innovation enhances safety standards, ensuring optimal performance and adaptability by prioritizing safety through curvature-aware speed adjustments.
-          </p>
-        </div>
-      </div>
-
-      <!-- User Project #3: Graph-Based Planner for Warehouse Navigation -->
-      <div class="user-projects">
-        <div class="images-left">
-          <video width="320" height="240" controls> 
-            <source src="assets/videos/graph-planner.mp4" type="video/mp4">
-        </video>
-        </div>
-        <div class="contents-right" style="text-align: center">
-          <h3>Graph-Based Planner for Warehouse Navigation</h3>
-          <div>
-            <img
-              height="32"
-              width="32"
-              src="https://unpkg.com/simple-icons@3.4.0/icons/cplusplus.svg"
-              style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-            />
-            <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/python.svg"
-            style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-          />
-          <img
-          height="75"
-          width="75"
-          src="assets/img/svg/ros_logo.svg"
-          style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-          />
-          
-          </div>
-          <p style="text-align: justify">
-            I spearheaded the development of a cutting-edge graph-based planner tailored for warehouse navigation in autonomous vehicles which streamlines fleet management and accelerates plan generation times. 
-          </p>
-        </div>
-      </div>
-
-      <!-- Use Project #4: Navigation Stack for Outdoor Autonomous Tractor -->
-      <div class="user-projects">
-        <div class="images-left">
-          <video width="320" height="240" controls> 
-            <source src="assets/videos/tractor-auto.mp4" type="video/mp4">
-        </video>
-        </div>
-        <div class="contents-right" style="text-align: center">
-          <h3>Navigation Stack for Outdoor Autonomous Tractor</h3>
-          <div>
-            <img
-              height="32"
-              width="32"
-              src="https://unpkg.com/simple-icons@3.4.0/icons/cplusplus.svg"
-              style="filter: invert(22%) sepia(77%) saturate(1486%) hue-rotate(183deg) brightness(101%) contrast(103%)"
-            />
-            <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/python.svg"
-            style="filter: invert(22%) sepia(77%) saturate(1486%) hue-rotate(183deg) brightness(101%) contrast(103%)"
-          />
-          <img
-          height="75"
-          width="75"
-          src="assets/img/svg/ros_logo.svg"
-          style="filter: invert(22%) sepia(77%) saturate(1486%) hue-rotate(183deg) brightness(101%) contrast(103%)"
-          />
-          </div>
-          <p style="text-align: justify">
-            I designed a comprehensive coverage-based global path planner for autonomous tractors as well as a local planner to precisely track the path and generate dynamic speed profiles 
-          </p>
-        </div>
-      </div>
-        
-      <div class="user-projects">
-        <div class="images-left">
-          <figure>
-
-            <img
-            src="assets/img/jpg/Inpainting-Object-Removal.jpeg"
-            width="320"
-            height="240"
-            alt="The left image is original one, the right one is inpainted with the removal of the white circle"/>
-            <figcaption style="text-align: center;"></figcaption>
-          </figure>
-        </div>
-        <div class="contents-right" style="text-align: center">
-          <h3>Region Filling and Object Removal using Image Inpainting</h3>
-          <div>
-            <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/python.svg"
-            style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-          />
-          </div>
-          &nbsp;
-          <p style="text-align: justify">
-            I delved into the realm of advanced image inpainting, specifically honing in on region filling and object removal. 
-            Taking inspiration from the renowned research paper "Region Filling and Object Removal by Exemplar-Based Image Inpainting" by A. Criminisi, P. 
-            Perez, and K. Toyama from Microsoft Research, I meticulously implemented cutting-edge algorithms.Utilizing Python 3.8 and leveraging the power 
-            of NumPy, I eliminated undesirable elements in visual content. In the image shown,the left image is original one, the right one is inpainted 
-            with the removal of the white circle
-          </p>
-        </div>
-      </div>
-    </section>
-
-     <!-- Projects Section -->
-    <section id="media-recon">
-      <div class="user-details">
-        <h1>📰📡 News-Worthy Projects: Recognized in the Media</h1>
-        <body>
-          <h1 style="font-size: 24px;">🚜 Autonomous Tractor Innovation: Making Headlines</h1>
-          <p>
-            <a href="https://www.youtube.com/watch?v=kGgJBGRi8xo">Autonomous Tractor Featured in the News from 10:42 to 11:39</a>
-          </p>
-      </body>
-      </div>
-    </section>
-
-    <!-- Blog Section -->
-         <section id="blogging">
-          <div class="user-details">
-            <h1>🔥 Trending Topics</h1>
-            <body>
-              <p>
-                <a href="https://medium.com/@shenoyvaradaraya8/revolutionizing-view-synthesis-nerf-unveiling-the-neural-radiance-fields-f15f825e6e86">
-                  Neural Radiance Fields(NeRF)</a>
-              </p>
-          </body>
-          </div>
-        </section>
+    <!-- Tab Section -->
+    <div class="tab">
+      <button class="tablinks active" onclick="location.href='index.html'">Home</button>
+      <button class="tablinks" onclick="location.href='./pages/about-me.html'">About Me</button>
+      <button class="tablinks" onclick="location.href='./pages/education.html'">Education</button>
+      <button class="tablinks" onclick="location.href='./pages/experiences.html'">Work Experience</button>
+      <button class="tablinks" onclick="location.href='./pages/projects.html'">Projects</button>
+    </div>
 
     <footer class="footer">
       <p>&copy; Varadaraya Ganesh Shenoy, 2024</p>
@@ -306,11 +129,8 @@
 
     <!-- Import JS: Particles Theme -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Import JS: Sweet Scroll -->
     <script src="./assets/js/sweet-scroll.min.js"></script>
-    <!-- Import JS: Google Analytics -->
     <script src="./assets/js/google-analytics.js"></script>
-    <!-- Import JS: Main Script -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

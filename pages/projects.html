@@ -24,7 +24,7 @@
         margin: 0;
         overflow-x: hidden; /* Prevent horizontal scrolling */
       }
-      
+
       body {
         display: flex;
         flex-direction: column;
@@ -85,18 +85,19 @@
         color: #525050;
         flex-shrink: 0;
       }
-
+      
       .tab {
         overflow: hidden;
         background-color: transparent;
         position: absolute;
         top: 20px;
-        right: 50px;
-        left: 1700px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 1;
         border: none;
         text-align: center;
         width: 100%;
+        box-sizing: border-box;
       }
 
       .tab button {

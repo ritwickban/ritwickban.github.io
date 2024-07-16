@@ -19,12 +19,15 @@
     </script>
     <style>
       html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+       margin: 0;
+       padding: 0;
+       width: 100%;
+       height: 100%;
       }
       #particles-js {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
         margin-bottom: -100px;
       }
       .header {
@@ -33,12 +36,12 @@
       }
 
       .header .site-title {
-        font-size: 3em;
+        font-size: 2em;
         color: white;
       }
 
       .header .site-description {
-        font-size: 1.5em;
+        font-size: 1em;
         color: #888;
       }
 
@@ -60,12 +63,13 @@
         background-color: transparent;
         position: absolute;
         top: 20px;
-        right: 50px;
-        left: 1500px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 1;
         border: none;
         text-align: center;
-        width: 500%;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .tab button {
@@ -77,7 +81,7 @@
         padding: 14px 16px;
         transition: 0.3s;
         font-family: 'Courier New', Courier, monospace; /* Use monospace font for matrix-like effect */
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 2px;
         color: white;
       }
@@ -96,7 +100,7 @@
       <div class="header">
         <h1>
           <span class="site-title">Varadaraya Ganesh Shenoy</span>
-          <span class="site-description">Software Developer • Robotics Researcher</span>
+          <span class="site-description">Robotics Software Developer</span>
         </h1>
         <div class="header-icons">
           <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/vgshenoy/">

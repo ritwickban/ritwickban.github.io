@@ -45,6 +45,7 @@
       .header .site-title {
         font-size: 2em;
         color: white;
+        font-family: Garamond, serif;
       }
 
       .header .site-description {
@@ -54,7 +55,7 @@
 
       .header-icons a {
         color: white;
-        margin: 0 10px;
+        margin: 50px 10px;
         font-size: 1.5em;
       }
 
@@ -105,10 +106,10 @@
   <body>
     <div id="particles-js">
       <div class="header">
-        <h1>
-          <span class="site-title">Ritwick Banerjee</span>
-          <span class="site-description">Data Scientist | NLP Researcher</span>
-        </h1>
+        <h2>
+          <span class="site-title">RITWICK BANERJEE</span> </h2>
+          <h2 style="color:#fff; margin: 0 0; padding: 0px; font-family: cursive;">I'm a <span class="typing" style="color:#da9621; font-family: cursive;"></span></h2>
+          <!--<span class="site-description">Data Scientist | NLP Researcher</span>-->
         <div class="header-icons">
           <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/contactritwick/">
             <i class="icon fa fa-linkedin" aria-hidden="true"></i>
@@ -143,6 +144,16 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="./assets/js/sweet-scroll.min.js"></script>
     <script src="./assets/js/google-analytics.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <script>
+      var typed = new Typed('.typing',{
+        strings: ["Data Scientist", "Data Analyst", "NLP Researcher", "Machine Learning Engineer"],
+        loop: true,
+        typeSpeed: 65,
+        backSpeed: 65
+      });
+    </script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

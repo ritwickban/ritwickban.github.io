@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About Ritwick Banerjee" />
+  <meta name="author" content="Ritwick Banerjee" />
+  <link rel="shortcut icon" href="../assets/img/png/Logo.png" />
+  <title>Ritwick Banerjee - About Me</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLGCY8MZ51"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZLGCY8MZ51');
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../assets/img/jpg/bg1.jpg');
+      z-index: 0;
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px;
+        max-width: 2000px;
+        margin: 200px 0px;
+        position: relative;
+        z-index: 1;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        /* Allow scrolling if content overflows */
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .header .site-title {
+      font-size: 3em;
+      color: white;
+    }
+
+    .header .site-description {
+      font-size: 1.5em;
+      color: #888;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
+      flex-shrink: 0;
+    }
+
+    .tab {
+        overflow: hidden;
+        background-color: transparent;
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        transform: translateX(0%);
+        z-index: 1;
+        border: none;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        
+      }
+
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-family: 'Courier New', Courier, monospace; /* Use monospace font for matrix-like effect */
+        font-size: 25px;
+        letter-spacing: 2px;
+        color: white;
+    }
+
+    .tab button:hover {
+        background-color: #333;
+    }
+
+    .tab button.active {
+        background-color: #555;
+    }
+    .about-me {
+        color: white;
+        padding: 0px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;/* Center items vertically */
+        /* Full viewport height */
+    }
+    .heading {
+        font-size: 2em;
+        display: flex;
+        color: #ffffff;
+        margin-bottom: 10px;
+        align-items: center;
+        text-align: center;
+    }
+    .text {
+      max-width: 80%; /* Adjust the width of the text container */
+      margin-right: 20px; /* Add some space between the text and the image */
+    }
+    .profile-pic {
+        height: 450px;
+        max-width: 450px; /* Adjust the width of the image */
+        border-radius: 8px;
+        border: 2px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Make the image circular */
+        z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <div class="content">
+    <div class="heading">Welcome to my corner of the Internet!</div>
+    <div class="about-me">
+        <div class = "text">
+            <p>Hey there! I'm Ritwick, a Graduate Research Assistant at the University of Minnesota, where I dive deep into data analyses to help a local school district reduce ethnic and economic disparities. By night, I'm a superhero researcher for the Minnesota NLP group, working on a repository to unify major language models and a framework to evaluate them. Oh, and did I mention my gig as a data analyst for the Mobile Health Initiative? Yep, I'm tackling emigrant health issues with data too! - Nah not a big deal!</p>
+            <p>When I'm not swimming in data, I'm whipping up culinary masterpieces that would make Gordon Ramsay proud, playing soccer, badminton, and squash (yes, I have too much energy), hiking, ice-skating, or chasing the elusive northern lights. I'm also a music explorer and podcast aficionado, always on the lookout for the next great self-development episode.</p>
+            <p>Here's a quirky tidbit: I have strikingly amazing conversations and a delightfully off-beat perspective on life. I live for a healthy debate and will probably disagree with you 90% of the time—not because I'm difficult, but because it's fun to keep things spicy!</p>
+            <p>Want to know that I am for real? Let's grab a coffee at the nearest Caribou Coffee (Yes, I am turning into a true Minnesotan!) Who knows, we might just teach ChatGPT to appreciate a Knock-knock joke.</p>
+        </div>
+        <img src="../assets/img/jpg/myphoto.jpg" alt="That's me!" class="profile-pic">    
+    </div>
+  </div>
+
+  <div class="tab">
+    <button class="tablinks" onclick="location.href='../index.html'">Home</button>
+    <button class="tablinks" onclick="location.href='../pages/education.html'">Education</button>
+    <button class="tablinks" onclick="location.href='../pages/experiences.html'">Experiences</button>
+    <button class="tablinks" onclick="location.href='../pages/projects.html'">Projects</button>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; Ritwick Banerjee, 2024</p>
+  </footer>
+
+  <!-- Import JS: Particles Theme -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../assets/js/sweet-scroll.min.js"></script>
+  <script src="../assets/js/google-analytics.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

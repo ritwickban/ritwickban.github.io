@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Studio — photography and poems by Ritwick Banerjee" />
+  <meta name="description" content="Studio — quotes, poems, and photography by Ritwick Banerjee" />
   <meta name="author" content="Ritwick Banerjee" />
   <link rel="shortcut icon" href="../assets/img/optimized/logo-240.png" />
   <title>Studio — Ritwick Banerjee</title>
@@ -39,6 +39,16 @@
       object-fit: cover;
       display: block;
       filter: saturate(1.03) contrast(1.03);
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    .studio-photo--loading img {
+      opacity: 0;
+    }
+
+    .studio-photo--loaded img {
+      opacity: 1;
+      transition: opacity 0.25s ease;
     }
 
     .poem-card {
@@ -60,6 +70,110 @@
       color: rgba(148, 163, 184, 0.92);
       white-space: pre-line;
       line-height: 1.75;
+    }
+
+    .studio-section-title {
+      margin: 2.5rem 0 0.75rem;
+      font-family: var(--font-serif);
+      color: var(--text);
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      font-weight: 400;
+    }
+
+    .studio-section-title:first-of-type {
+      margin-top: 2rem;
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .quote-card {
+      position: relative;
+      padding: 1.35rem 1.35rem 1.15rem 1.5rem;
+      background: rgba(18, 32, 56, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 14px;
+      border-left: 3px solid var(--accent);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .quote-card::before {
+      content: '“';
+      position: absolute;
+      top: 0.35rem;
+      left: 0.65rem;
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      line-height: 1;
+      color: rgba(45, 212, 191, 0.35);
+      pointer-events: none;
+    }
+
+    .quote-text {
+      margin: 0 0 0.85rem;
+      padding-left: 0.5rem;
+      font-size: 1.02rem;
+      line-height: 1.65;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .quote-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      padding-left: 0.5rem;
+    }
+
+    .quote-attribution {
+      margin: 0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    .quote-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .quote-tag--original {
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-color: rgba(45, 212, 191, 0.25);
+    }
+
+    .quote-tag--found {
+      color: var(--gold);
+      background: rgba(212, 168, 83, 0.12);
+      border-color: rgba(212, 168, 83, 0.25);
+    }
+
+    .quote-note {
+      width: 100%;
+      margin: 0.35rem 0 0;
+      padding-left: 0.5rem;
+      font-size: 0.78rem;
+      color: rgba(148, 163, 184, 0.75);
+      font-style: normal;
+    }
+
+    .quotes-empty {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -92,25 +206,22 @@
   <div class="page-wrap">
     <main class="page-main">
       <p class="section-label">Studio</p>
-      <h1 class="page-title">Photography &amp; poems</h1>
+      <h1 class="page-title">Quotes, poems &amp; photography</h1>
       <p style="color: var(--text-muted); margin-top: -1rem; max-width: 48rem;">
-        A small corner for the non-research parts of my brain. I’ll keep adding photos and short poems here over time.
+        A small corner for the non-research parts of my brain — lines I want to remember, writing from my archive, and images I’ve taken.
       </p>
 
-      <h2 style="margin: 2rem 0 0.75rem; font-family: var(--font-serif); color: var(--text); text-shadow: 0 2px 18px rgba(0,0,0,0.75);">Photography</h2>
-      <div class="studio-grid" aria-label="Photography gallery">
-        <div class="studio-photo">
-          <img src="../assets/img/optimized/me-7-1600.jpg" alt="Photo" loading="lazy" decoding="async" />
-        </div>
-        <div class="studio-photo">
-          <img src="../assets/img/optimized/me-2-1600.jpg" alt="Photo" loading="lazy" decoding="async" />
-        </div>
-        <div class="studio-photo">
-          <img src="../assets/img/optimized/me-1-1600.jpg" alt="Photo" loading="lazy" decoding="async" />
-        </div>
-      </div>
+      <h2 class="studio-section-title">Quotes</h2>
+      <p style="color: var(--text-muted); margin: -0.25rem 0 0; max-width: 42rem; font-size: 0.95rem;">
+        Things I’ve written down or come across — original thoughts and borrowed wisdom.
+      </p>
+      <div id="quotes-grid" class="quotes-grid" aria-label="Quotes"></div>
+      <p id="quotes-empty" class="quotes-empty" hidden>No quotes yet. Add them in <code>assets/quotes.json</code>.</p>
 
-      <h2 style="margin: 2.5rem 0 0.75rem; font-family: var(--font-serif); color: var(--text); text-shadow: 0 2px 18px rgba(0,0,0,0.75);">Poems (picked from my archive)</h2>
+      <h2 class="studio-section-title">Poems</h2>
+      <p style="color: var(--text-muted); margin: -0.25rem 0 0; max-width: 42rem; font-size: 0.95rem;">
+        Picked from my archive.
+      </p>
       <div class="studio-grid" aria-label="Poems">
         <div class="poem-card">
           <h3 class="poem-title">Grandfather</h3>
@@ -229,6 +340,12 @@
 ©_the.big.blue_</p>
         </div>
       </div>
+
+      <h2 class="studio-section-title">Photograph gallery</h2>
+      <p style="color: var(--text-muted); margin: -0.25rem 0 0; max-width: 42rem; font-size: 0.95rem;">
+        Recent shots and favorites — images load as you scroll.
+      </p>
+      <div id="photo-gallery" class="studio-grid" aria-label="Photograph gallery"></div>
     </main>
 
     <footer class="site-footer">
@@ -238,6 +355,115 @@
 
   <script src="../assets/js/sweet-scroll.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/studio-data.js"></script>
+  <script>
+    (function () {
+      var grid = document.getElementById('quotes-grid');
+      var empty = document.getElementById('quotes-empty');
+      if (!grid) return;
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function renderQuotes(quotes) {
+        if (!quotes || !quotes.length) {
+          empty.hidden = false;
+          return;
+        }
+        empty.hidden = true;
+        grid.innerHTML = quotes.map(function (q) {
+          var isOriginal = q.kind === 'original';
+          var tagClass = isOriginal ? 'quote-tag--original' : 'quote-tag--found';
+          var tagLabel = isOriginal ? 'Original' : 'Found';
+          var note = q.note
+            ? '<p class="quote-note">' + escapeHtml(q.note) + '</p>'
+            : '';
+          return (
+            '<article class="quote-card">' +
+              '<blockquote class="quote-text">' + escapeHtml(q.text) + '</blockquote>' +
+              '<footer class="quote-footer">' +
+                '<span class="quote-tag ' + tagClass + '">' + tagLabel + '</span>' +
+                '<p class="quote-attribution">— ' + escapeHtml(q.attribution || 'Unknown') + '</p>' +
+              '</footer>' +
+              note +
+            '</article>'
+          );
+        }).join('');
+      }
+
+      function loadQuotes() {
+        if (window.STUDIO_QUOTES && window.STUDIO_QUOTES.length) {
+          renderQuotes(window.STUDIO_QUOTES);
+          return;
+        }
+        if (location.protocol === 'file:') {
+          empty.hidden = false;
+          empty.textContent = 'Quotes could not load. Run ./scripts/refresh-studio.sh from the site folder, then reopen this page.';
+          return;
+        }
+        fetch('../assets/quotes.json')
+          .then(function (res) { return res.json(); })
+          .then(renderQuotes)
+          .catch(function () { empty.hidden = false; });
+      }
+
+      loadQuotes();
+    })();
+
+    (function () {
+      var gallery = document.getElementById('photo-gallery');
+      if (!gallery) return;
+
+      function renderGallery(images) {
+        if (!images || !images.length) return;
+        gallery.innerHTML = images.map(function (item, index) {
+          var src = typeof item === 'string' ? item : item.src;
+          var alt = (item && item.alt) || 'Photography by Ritwick Banerjee';
+          var eager = index < 6 ? 'eager' : 'lazy';
+          var priority = index < 3 ? ' fetchpriority="high"' : '';
+          return (
+            '<div class="studio-photo studio-photo--loading">' +
+              '<img src="' + src + '" alt="' + alt.replace(/"/g, '&quot;') + '" loading="' + eager + '" decoding="async"' + priority + ' />' +
+            '</div>'
+          );
+        }).join('');
+
+        gallery.querySelectorAll('.studio-photo img').forEach(function (img) {
+          function markLoaded() {
+            img.parentElement.classList.remove('studio-photo--loading');
+            img.parentElement.classList.add('studio-photo--loaded');
+          }
+          if (img.complete) markLoaded();
+          else {
+            img.addEventListener('load', markLoaded, { once: true });
+            img.addEventListener('error', markLoaded, { once: true });
+          }
+        });
+      }
+
+      function loadGallery() {
+        if (window.STUDIO_GALLERY && window.STUDIO_GALLERY.length) {
+          renderGallery(window.STUDIO_GALLERY);
+          return;
+        }
+        if (location.protocol === 'file:') {
+          gallery.innerHTML = '<p class="quotes-empty">Photos could not load. Run ./scripts/refresh-studio.sh from the site folder, then reopen this page.</p>';
+          return;
+        }
+        fetch('../assets/gallery.json')
+          .then(function (res) { return res.json(); })
+          .then(renderGallery)
+          .catch(function () { /* keep gallery empty on failure */ });
+      }
+
+      loadGallery();
+    })();
+  </script>
 </body>
 </html>
 
